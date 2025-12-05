@@ -2,9 +2,7 @@ package pe.pixelstudio.pixelev.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.Button
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -13,11 +11,13 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import pe.pixelstudio.pixelev.ui.navigation.AppRoutes
 import pe.pixelstudio.pixelev.viewmodel.CuestionarioViewModel
+import pe.pixelstudio.pixelev.viewmodel.SunatValidationState
 
 @Composable
 fun PersonaJuridicaRucScreen(navController: NavController, viewModel: CuestionarioViewModel) {
-    var ruc by remember { mutableStateOf("20") }
-    val isRucValid = ruc.length == 11
+    val uiState by viewModel.uiState.collectAsState()
+    val sunatState by viewModel.sunatState.collectAsState()
+    val isRucValid = uiState.dniORuc.length == 11
 
     Column(
         modifier = Modifier.fillMaxSize().padding(16.dp),
@@ -27,26 +27,38 @@ fun PersonaJuridicaRucScreen(navController: NavController, viewModel: Cuestionar
         Text("Ingresar RUC")
         Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(
-            value = ruc,
-            onValueChange = { if (it.length <= 11 && it.startsWith("20")) ruc = it },
+            value = uiState.dniORuc,
+            onValueChange = { viewModel.onRucChanged(it) },
             label = { Text("RUC") },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            isError = !isRucValid && uiState.dniORuc.length > 2
         )
-        if (!isRucValid) {
+        if (!isRucValid && uiState.dniORuc.length > 2) {
             Text("El RUC debe tener 11 dígitos y empezar con 20")
         }
         Spacer(modifier = Modifier.height(16.dp))
-        Row {
-            Button(onClick = { navController.popBackStack() }) {
-                Text("Atrás")
+
+        when (val state = sunatState) {
+            is SunatValidationState.Loading -> CircularProgressIndicator()
+            is SunatValidationState.Success -> {
+                Text("Razón Social: ${state.nombre}")
+                Spacer(modifier = Modifier.height(8.dp))
+                Button(onClick = { navController.navigate(AppRoutes.CONFIRMACION_DATOS_SUNAT) }) {
+                    Text("Siguiente")
+                }
             }
-            Spacer(modifier = Modifier.width(8.dp))
-            Button(
-                onClick = { navController.navigate(AppRoutes.CONFIRMACION_DATOS_SUNAT) },
+            is SunatValidationState.Error -> Text(state.message)
+            else -> Button(
+                onClick = { viewModel.validarDocumento() },
                 enabled = isRucValid
             ) {
-                Text("Siguiente")
+                Text("Validar")
             }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { navController.popBackStack() }) {
+            Text("Atrás")
         }
     }
 }
