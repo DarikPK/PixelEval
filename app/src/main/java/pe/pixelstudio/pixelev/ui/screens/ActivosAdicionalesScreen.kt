@@ -18,7 +18,7 @@ fun ActivosAdicionalesScreen(navController: NavController, viewModel: Cuestionar
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 28: Activos Adicionales")
+        Text("Activos Adicionales")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría la lista dinámica de activos adicionales
         Row {

@@ -18,13 +18,13 @@ fun TipoClienteScreen(navController: NavController, viewModel: CuestionarioViewM
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 1: Tipo de Cliente")
+        Text("Tipo de Cliente")
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.navigate(AppRoutes.DNI_RUC) }) {
+        Button(onClick = { navController.navigate(AppRoutes.PERSONA_NATURAL_DNI) }) {
             Text("Persona Natural")
         }
         Spacer(modifier = Modifier.height(8.dp))
-        Button(onClick = { navController.navigate(AppRoutes.DNI_RUC) }) {
+        Button(onClick = { navController.navigate(AppRoutes.PERSONA_JURIDICA_RUC) }) {
             Text("Persona Jurídica")
         }
     }

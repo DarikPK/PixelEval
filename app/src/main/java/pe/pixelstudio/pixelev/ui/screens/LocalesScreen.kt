@@ -18,7 +18,7 @@ fun LocalesScreen(navController: NavController, viewModel: CuestionarioViewModel
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 27: Locales")
+        Text("Locales")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría la lista dinámica de locales
         Row {

@@ -18,7 +18,7 @@ fun AlquilerScreen(navController: NavController, viewModel: CuestionarioViewMode
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 20: Alquiler")
+        Text("Alquiler")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría el campo de monto de alquiler
         Row {

@@ -18,7 +18,7 @@ fun GiroNegocioScreen(navController: NavController, viewModel: CuestionarioViewM
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 4: Giro del Negocio")
+        Text("Giro del Negocio")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría el campo de autocompletado
         Row {

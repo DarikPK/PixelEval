@@ -18,7 +18,7 @@ fun DiasLaborablesScreen(navController: NavController, viewModel: CuestionarioVi
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 30: Días Laborables")
+        Text("Días Laborables")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría el selector semanal
         Row {

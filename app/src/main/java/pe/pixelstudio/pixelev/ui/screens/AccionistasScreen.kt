@@ -18,7 +18,7 @@ fun AccionistasScreen(navController: NavController, viewModel: CuestionarioViewM
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 15: Accionistas")
+        Text("Accionistas")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría la lista dinámica de accionistas
         Row {

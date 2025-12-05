@@ -18,7 +18,7 @@ fun DniRepresentanteScreen(navController: NavController, viewModel: Cuestionario
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 11: DNI del Representante Legal")
+        Text("DNI del Representante Legal")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría el campo de DNI y la opción de subir foto
         Row {

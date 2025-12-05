@@ -18,7 +18,7 @@ fun CuentasPorCobrarScreen(navController: NavController, viewModel: Cuestionario
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 25: Cuentas por Cobrar")
+        Text("Cuentas por Cobrar")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las preguntas sobre cuentas por cobrar
         Row {

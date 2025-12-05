@@ -18,7 +18,7 @@ fun BancosScreen(navController: NavController, viewModel: CuestionarioViewModel)
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 24: Bancos")
+        Text("Bancos")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las opciones de bancos y saldos
         Row {

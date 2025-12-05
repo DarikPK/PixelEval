@@ -18,7 +18,7 @@ fun InventarioScreen(navController: NavController, viewModel: CuestionarioViewMo
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 26: Inventario")
+        Text("Inventario")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría la lista dinámica de inventario
         Row {

@@ -18,7 +18,7 @@ fun InicioActividadesScreen(navController: NavController, viewModel: Cuestionari
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 7: Inicio de Actividades")
+        Text("Inicio de Actividades")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las opciones de fecha
         Row {

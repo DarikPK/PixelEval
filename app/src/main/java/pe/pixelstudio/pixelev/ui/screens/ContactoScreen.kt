@@ -18,7 +18,7 @@ fun ContactoScreen(navController: NavController, viewModel: CuestionarioViewMode
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 9: Contacto")
+        Text("Contacto")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían los campos de celular y correo
         Row {

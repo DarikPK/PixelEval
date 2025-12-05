@@ -18,7 +18,7 @@ fun PropiedadesSociosScreen(navController: NavController, viewModel: Cuestionari
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 16: Propiedades de los Socios")
+        Text("Propiedades de los Socios")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las preguntas sobre propiedades de los socios
         Row {

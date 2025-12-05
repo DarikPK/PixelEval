@@ -18,7 +18,7 @@ fun ProductosServiciosScreen(navController: NavController, viewModel: Cuestionar
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 31: Productos y Servicios")
+        Text("Productos y Servicios")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría la lista dinámica de productos y servicios
         Row {

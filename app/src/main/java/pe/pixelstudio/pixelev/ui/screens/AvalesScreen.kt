@@ -18,7 +18,7 @@ fun AvalesScreen(navController: NavController, viewModel: CuestionarioViewModel)
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso: Avales")
+        Text("Avales")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría la lista dinámica de avales
         Row {

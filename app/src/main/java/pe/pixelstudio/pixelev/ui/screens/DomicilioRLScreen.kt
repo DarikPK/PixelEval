@@ -18,7 +18,7 @@ fun DomicilioRLScreen(navController: NavController, viewModel: CuestionarioViewM
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 14: Domicilio del Representante Legal")
+        Text("Domicilio del Representante Legal")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían todos los campos relacionados al domicilio
         Row {

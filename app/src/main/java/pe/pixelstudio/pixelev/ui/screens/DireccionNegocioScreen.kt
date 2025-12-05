@@ -18,7 +18,7 @@ fun DireccionNegocioScreen(navController: NavController, viewModel: Cuestionario
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 8: Dirección del Negocio")
+        Text("Dirección del Negocio")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían los campos de dirección
         Row {

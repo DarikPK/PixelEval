@@ -18,7 +18,7 @@ fun EstadoCivilPNScreen(navController: NavController, viewModel: CuestionarioVie
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso: Estado Civil")
+        Text("Estado Civil")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las opciones de estado civil
         Row {

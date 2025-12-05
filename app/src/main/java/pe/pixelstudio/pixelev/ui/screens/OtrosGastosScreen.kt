@@ -18,7 +18,7 @@ fun OtrosGastosScreen(navController: NavController, viewModel: CuestionarioViewM
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 23: Otros Gastos")
+        Text("Otros Gastos")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría la lista dinámica de otros gastos
         Row {

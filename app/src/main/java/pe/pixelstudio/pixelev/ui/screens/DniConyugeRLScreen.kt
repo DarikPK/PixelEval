@@ -18,7 +18,7 @@ fun DniConyugeRLScreen(navController: NavController, viewModel: CuestionarioView
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 13: DNI del Cónyuge del Representante Legal")
+        Text("DNI del Cónyuge del Representante Legal")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría el campo de DNI del cónyuge
         Row {

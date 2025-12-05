@@ -18,7 +18,7 @@ fun RegimenTributarioScreen(navController: NavController, viewModel: Cuestionari
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 5: Régimen Tributario")
+        Text("Régimen Tributario")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las opciones de régimen tributario
         Row {

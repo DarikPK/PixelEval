@@ -18,7 +18,7 @@ fun TipoProductoScreen(navController: NavController, viewModel: CuestionarioView
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 18: Tipo de Producto")
+        Text("Tipo de Producto")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las opciones de tipo de producto
         Row {

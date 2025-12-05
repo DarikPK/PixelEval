@@ -18,7 +18,7 @@ fun ContadorScreen(navController: NavController, viewModel: CuestionarioViewMode
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 22: Contador")
+        Text("Contador")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría el campo de honorarios del contador
         Row {

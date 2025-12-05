@@ -11,7 +11,8 @@ import pe.pixelstudio.pixelev.viewmodel.CuestionarioViewModel
 object AppRoutes {
     const val HOME = "home"
     const val TIPO_CLIENTE = "tipo_cliente"
-    const val DNI_RUC = "dni_ruc"
+    const val PERSONA_NATURAL_DNI = "persona_natural_dni"
+    const val PERSONA_JURIDICA_RUC = "persona_juridica_ruc"
     const val CONFIRMACION_DATOS_SUNAT = "confirmacion_datos_sunat"
     const val GIRO_NEGOCIO = "giro_negocio"
     const val REGIMEN_TRIBUTARIO = "regimen_tributario"
@@ -55,7 +56,8 @@ fun AppNavigation() {
     NavHost(navController = navController, startDestination = AppRoutes.HOME) {
         composable(AppRoutes.HOME) { HomeScreen(navController) }
         composable(AppRoutes.TIPO_CLIENTE) { TipoClienteScreen(navController, viewModel) }
-        composable(AppRoutes.DNI_RUC) { DniRucScreen(navController, viewModel) }
+        composable(AppRoutes.PERSONA_NATURAL_DNI) { PersonaNaturalDniScreen(navController, viewModel) }
+        composable(AppRoutes.PERSONA_JURIDICA_RUC) { PersonaJuridicaRucScreen(navController, viewModel) }
         composable(AppRoutes.CONFIRMACION_DATOS_SUNAT) { ConfirmacionDatosSunatScreen(navController, viewModel) }
         composable(AppRoutes.GIRO_NEGOCIO) { GiroNegocioScreen(navController, viewModel) }
         composable(AppRoutes.REGIMEN_TRIBUTARIO) { RegimenTributarioScreen(navController, viewModel) }

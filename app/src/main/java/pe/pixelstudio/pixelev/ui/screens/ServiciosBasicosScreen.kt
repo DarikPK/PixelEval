@@ -18,7 +18,7 @@ fun ServiciosBasicosScreen(navController: NavController, viewModel: Cuestionario
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 21: Servicios Básicos")
+        Text("Servicios Básicos")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían los campos de agua, luz e internet
         Row {

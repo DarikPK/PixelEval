@@ -18,7 +18,7 @@ fun ContactoPersonalRLScreen(navController: NavController, viewModel: Cuestionar
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 17: Contacto Personal del Representante Legal")
+        Text("Contacto Personal del Representante Legal")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían los campos de contacto personal
         Row {

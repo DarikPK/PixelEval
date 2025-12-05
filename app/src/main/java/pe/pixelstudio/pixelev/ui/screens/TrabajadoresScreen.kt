@@ -18,7 +18,7 @@ fun TrabajadoresScreen(navController: NavController, viewModel: CuestionarioView
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 29: Trabajadores")
+        Text("Trabajadores")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí iría la lista estructurada de trabajadores
         Row {

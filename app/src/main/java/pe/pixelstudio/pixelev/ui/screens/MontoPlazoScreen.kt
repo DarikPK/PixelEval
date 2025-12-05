@@ -18,7 +18,7 @@ fun MontoPlazoScreen(navController: NavController, viewModel: CuestionarioViewMo
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 19: Monto y Plazo")
+        Text("Monto y Plazo")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían los campos de monto, plazo y el mini simulador
         Row {

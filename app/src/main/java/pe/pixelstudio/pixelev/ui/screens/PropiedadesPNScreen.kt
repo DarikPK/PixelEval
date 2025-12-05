@@ -18,7 +18,7 @@ fun PropiedadesPNScreen(navController: NavController, viewModel: CuestionarioVie
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso: Propiedades")
+        Text("Propiedades")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las preguntas sobre propiedades
         Row {

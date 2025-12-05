@@ -18,7 +18,7 @@ fun ConfirmacionDatosSunatScreen(navController: NavController, viewModel: Cuesti
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 3: Confirmación de Datos SUNAT")
+        Text("Confirmación de Datos SUNAT")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí se mostrarían los datos de SUNAT
         Row {

@@ -18,7 +18,7 @@ fun TipoLocalScreen(navController: NavController, viewModel: CuestionarioViewMod
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 6: Tipo de Local")
+        Text("Tipo de Local")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las opciones de tipo de local y subida de fotos
         Row {

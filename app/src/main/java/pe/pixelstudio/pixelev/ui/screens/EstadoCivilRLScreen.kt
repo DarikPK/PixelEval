@@ -18,7 +18,7 @@ fun EstadoCivilRLScreen(navController: NavController, viewModel: CuestionarioVie
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Paso 12: Estado Civil del Representante Legal")
+        Text("Estado Civil del Representante Legal")
         Spacer(modifier = Modifier.height(16.dp))
         // Aquí irían las opciones de estado civil
         Row {
