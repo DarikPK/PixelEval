@@ -8,9 +8,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import pe.pixelstudio.pixelev.viewmodel.CuestionarioViewModel
 
 @Composable
-fun ResumenScreen(navController: NavController) {
+fun ResumenScreen(navController: NavController, viewModel: CuestionarioViewModel) {
     Column(
         modifier = Modifier.fillMaxSize().padding(16.dp),
         verticalArrangement = Arrangement.Center,

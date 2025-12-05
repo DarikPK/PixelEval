@@ -9,9 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import pe.pixelstudio.pixelev.ui.navigation.AppRoutes
+import pe.pixelstudio.pixelev.viewmodel.CuestionarioViewModel
 
 @Composable
-fun DniRucScreen(navController: NavController) {
+fun DniRucScreen(navController: NavController, viewModel: CuestionarioViewModel) {
     Column(
         modifier = Modifier.fillMaxSize().padding(16.dp),
         verticalArrangement = Arrangement.Center,
