@@ -9,6 +9,7 @@ import pe.pixelstudio.pixelev.ui.screens.*
 import pe.pixelstudio.pixelev.viewmodel.CuestionarioViewModel
 
 object AppRoutes {
+    const val HOME = "home"
     const val TIPO_CLIENTE = "tipo_cliente"
     const val DNI_RUC = "dni_ruc"
     const val CONFIRMACION_DATOS_SUNAT = "confirmacion_datos_sunat"
@@ -51,7 +52,8 @@ fun AppNavigation() {
     val navController = rememberNavController()
     val viewModel: CuestionarioViewModel = viewModel()
 
-    NavHost(navController = navController, startDestination = AppRoutes.TIPO_CLIENTE) {
+    NavHost(navController = navController, startDestination = AppRoutes.HOME) {
+        composable(AppRoutes.HOME) { HomeScreen(navController) }
         composable(AppRoutes.TIPO_CLIENTE) { TipoClienteScreen(navController, viewModel) }
         composable(AppRoutes.DNI_RUC) { DniRucScreen(navController, viewModel) }
         composable(AppRoutes.CONFIRMACION_DATOS_SUNAT) { ConfirmacionDatosSunatScreen(navController, viewModel) }
