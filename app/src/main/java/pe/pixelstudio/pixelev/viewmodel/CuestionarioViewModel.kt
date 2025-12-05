@@ -24,6 +24,12 @@ class CuestionarioViewModel : ViewModel() {
     private val _sunatState = MutableStateFlow<SunatValidationState>(SunatValidationState.Idle)
     val sunatState = _sunatState.asStateFlow()
 
+    private val _isEvaluationInProgress = MutableStateFlow(false)
+    val isEvaluationInProgress = _isEvaluationInProgress.asStateFlow()
+
+    private val _lastScreenRoute = MutableStateFlow<String?>(null)
+    val lastScreenRoute = _lastScreenRoute.asStateFlow()
+
     fun onTipoClienteChanged(tipoCliente: String) {
         _uiState.update { it.copy(tipoCliente = tipoCliente) }
         if (tipoCliente == "PERSONA_JURIDICA") {
@@ -31,6 +37,7 @@ class CuestionarioViewModel : ViewModel() {
         } else {
             _uiState.update { it.copy(dniORuc = "") }
         }
+        _isEvaluationInProgress.value = true
     }
 
     fun onDniChanged(dni: String) {
@@ -65,5 +72,20 @@ class CuestionarioViewModel : ViewModel() {
                 _sunatState.value = SunatValidationState.Error("Error de red o documento no válido")
             }
         }
+    }
+
+    fun setLastScreen(route: String) {
+        _lastScreenRoute.value = route
+    }
+
+    fun saveEvaluation() {
+        // TODO: Implementar lógica de guardado
+    }
+
+    fun clearEvaluation() {
+        _uiState.value = CuestionarioState()
+        _sunatState.value = SunatValidationState.Idle
+        _isEvaluationInProgress.value = false
+        _lastScreenRoute.value = null
     }
 }
