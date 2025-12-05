@@ -3,6 +3,7 @@ package pe.pixelstudio.pixelev.ui.screens
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -14,6 +15,10 @@ import pe.pixelstudio.pixelev.viewmodel.CuestionarioViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TipoClienteScreen(navController: NavController, viewModel: CuestionarioViewModel) {
+    LaunchedEffect(Unit) {
+        viewModel.resetSunatValidation()
+    }
+
     Scaffold(
         topBar = { QuestionnaireTopAppBar(navController = navController, viewModel = viewModel) }
     ) { paddingValues ->

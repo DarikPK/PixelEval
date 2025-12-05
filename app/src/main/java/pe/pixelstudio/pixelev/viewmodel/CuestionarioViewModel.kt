@@ -88,4 +88,9 @@ class CuestionarioViewModel : ViewModel() {
         _isEvaluationInProgress.value = false
         _lastScreenRoute.value = null
     }
+
+    fun resetSunatValidation() {
+        _sunatState.value = SunatValidationState.Idle
+        _uiState.update { it.copy(razonSocial = "") }
+    }
 }
