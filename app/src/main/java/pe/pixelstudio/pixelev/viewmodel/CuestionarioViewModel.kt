@@ -52,12 +52,14 @@ class CuestionarioViewModel : ViewModel() {
                 val numeroDocumento = _uiState.value.dniORuc
                 if (_uiState.value.tipoCliente == "PERSONA_NATURAL") {
                     val dniData = RetrofitClient.instance.getDniData(numeroDocumento)
-                    _sunatState.value = SunatValidationState.Success(dniData.nombre)
-                    _uiState.update { it.copy(razonSocial = dniData.nombre) }
+                    val nombre = dniData.nombre ?: "Nombre no disponible"
+                    _sunatState.value = SunatValidationState.Success(nombre)
+                    _uiState.update { it.copy(razonSocial = nombre) }
                 } else {
                     val rucData = RetrofitClient.instance.getRucData(numeroDocumento)
-                    _sunatState.value = SunatValidationState.Success(rucData.nombre)
-                    _uiState.update { it.copy(razonSocial = rucData.nombre) }
+                    val nombre = rucData.nombre ?: "Razón social no disponible"
+                    _sunatState.value = SunatValidationState.Success(nombre)
+                    _uiState.update { it.copy(razonSocial = nombre) }
                 }
             } catch (e: Exception) {
                 _sunatState.value = SunatValidationState.Error("Error de red o documento no válido")

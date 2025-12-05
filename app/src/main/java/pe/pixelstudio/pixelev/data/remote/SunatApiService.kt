@@ -12,19 +12,19 @@ interface SunatApiService {
 }
 
 data class RucData(
-    val nombre: String,
-    val numeroDocumento: String,
-    val estado: String,
-    val condicion: String,
-    val direccion: String,
-    val ubigeo: String,
-    val distrito: String,
+    val nombre: String?,
+    val numeroDocumento: String?,
+    val estado: String?,
+    val condicion: String?,
+    val direccion: String?,
+    val ubigeo: String?,
+    val distrito: String?,
 )
 
 data class DniData(
-    val nombre: String,
-    val numeroDocumento: String,
-    val apellidoPaterno: String,
-    val apellidoMaterno: String,
-    val nombres: String,
+    val nombre: String?,
+    val numeroDocumento: String?,
+    val apellidoPaterno: String?,
+    val apellidoMaterno: String?,
+    val nombres: String?,
 )

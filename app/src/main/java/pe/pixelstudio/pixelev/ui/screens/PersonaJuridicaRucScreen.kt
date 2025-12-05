@@ -34,7 +34,7 @@ fun PersonaJuridicaRucScreen(navController: NavController, viewModel: Cuestionar
             isError = !isRucValid && uiState.dniORuc.length > 2
         )
         if (!isRucValid && uiState.dniORuc.length > 2) {
-            Text("El RUC debe tener 11 dígitos y empezar con 20")
+            Text("El RUC debe tener 11 dígitos")
         }
         Spacer(modifier = Modifier.height(16.dp))
 
