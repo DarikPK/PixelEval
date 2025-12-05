@@ -26,6 +26,11 @@ class CuestionarioViewModel : ViewModel() {
 
     fun onTipoClienteChanged(tipoCliente: String) {
         _uiState.update { it.copy(tipoCliente = tipoCliente) }
+        if (tipoCliente == "PERSONA_JURIDICA") {
+            _uiState.update { it.copy(dniORuc = "20") }
+        } else {
+            _uiState.update { it.copy(dniORuc = "") }
+        }
     }
 
     fun onDniChanged(dni: String) {

@@ -20,11 +20,17 @@ fun TipoClienteScreen(navController: NavController, viewModel: CuestionarioViewM
     ) {
         Text("Tipo de Cliente")
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.navigate(AppRoutes.PERSONA_NATURAL_DNI) }) {
+        Button(onClick = {
+            viewModel.onTipoClienteChanged("PERSONA_NATURAL")
+            navController.navigate(AppRoutes.PERSONA_NATURAL_DNI)
+        }) {
             Text("Persona Natural")
         }
         Spacer(modifier = Modifier.height(8.dp))
-        Button(onClick = { navController.navigate(AppRoutes.PERSONA_JURIDICA_RUC) }) {
+        Button(onClick = {
+            viewModel.onTipoClienteChanged("PERSONA_JURIDICA")
+            navController.navigate(AppRoutes.PERSONA_JURIDICA_RUC)
+        }) {
             Text("Persona Jurídica")
         }
     }
